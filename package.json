@@ -1,0 +1,27 @@
+{
+  "name": "cypress-demo",
+  "version": "1.0.0",
+  "description": "Cypress E2E demo application",
+  "main": "index.js",
+  "dependencies": {
+    "cypress": "^12.3.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nicklasbekkevold/cypress-demo.git"
+  },
+  "author": "Nicklas Bekkevold",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nicklasbekkevold/cypress-demo/issues"
+  },
+  "homepage": "https://github.com/nicklasbekkevold/cypress-demo#readme",
+  "keywords": [
+    "cypress",
+    "e2e"
+  ]
+}
