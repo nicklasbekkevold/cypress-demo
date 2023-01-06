@@ -16,5 +16,11 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
-// Alternatively you can use CommonJS syntax:
-// require('./commands')
+// TypeScript declarations
+declare global {
+    namespace Cypress {
+        interface Chainable {
+            console(value: string): Chainable<JQuery<HTMLElement>>
+        }
+    }
+}

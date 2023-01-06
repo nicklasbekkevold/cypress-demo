@@ -103,7 +103,7 @@ context('Spies, Stubs, and Clock', () => {
        * Greets a person
        * @param {string} name
       */
-      greet(name) {
+      greet(name?: string | number) {
         return `Hello, ${name}!`
       },
     }
