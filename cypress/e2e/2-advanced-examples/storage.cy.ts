@@ -1,5 +1,3 @@
-/// <reference types="cypress" />
-
 context('Local Storage / Session Storage', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/commands/storage')
