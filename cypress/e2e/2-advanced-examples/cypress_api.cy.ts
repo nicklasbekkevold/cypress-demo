@@ -19,6 +19,7 @@ context('Cypress.Commands', () => {
         method = method || 'log';
 
         // log the subject to the console
+        // @ts-expect-error
         console[method]('The subject is', subject);
 
         // whatever we return becomes the new subject
@@ -30,7 +31,7 @@ context('Cypress.Commands', () => {
 
     cy.get('button')
       .console('info')
-      .then(($button) => {
+      .then((_$button) => {
         // subject is still $button
       });
   });

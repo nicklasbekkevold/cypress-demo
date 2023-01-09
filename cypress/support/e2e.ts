@@ -20,7 +20,7 @@ import './commands';
 // TypeScript declarations
 declare global {
   namespace Cypress {
-    interface Chainable {
+    interface Chainable<Subject> {
       console(value: string): Chainable<JQuery<HTMLElement>>;
     }
   }

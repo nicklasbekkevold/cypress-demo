@@ -68,7 +68,7 @@ context('Assertions', () => {
         .should(($p) => {
           // https://on.cypress.io/$
           // return an array of texts from all of the p's
-          const texts = $p.map((i, el) => Cypress.$(el).text());
+          const texts = $p.map((_, el) => Cypress.$(el).text());
 
           // jquery map returns jquery object
           // and .get() convert this to simple array
@@ -127,14 +127,14 @@ context('Assertions', () => {
        * Text from the first element.
        * @type {string}
        */
-      let text;
+      let text: string;
 
       /**
        * Normalizes passed text,
        * useful before comparing text with spaces and different capitalization.
        * @param {string} s Text to normalize
        */
-      const normalizeText = (s) => s.replace(/\s/g, '').toLowerCase();
+      const normalizeText = (s: string) => s.replace(/\s/g, '').toLowerCase();
 
       cy.get('.two-elements')
         .find('.first')

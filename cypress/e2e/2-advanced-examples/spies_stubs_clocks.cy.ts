@@ -23,9 +23,9 @@ context('Spies, Stubs, and Clock', () => {
     const obj = {
       /**
        * Prints the argument passed
-       * @param x {any}
+       * @param x {string}
        */
-      foo(x) {
+      foo(x: string) {
         console.log('obj.foo called with', x);
       },
     };
@@ -53,7 +53,7 @@ context('Spies, Stubs, and Clock', () => {
        * @param a {string}
        * @param b {string}
        */
-      foo(a, b) {
+      foo(a: string, b: string) {
         console.log('a', a, 'b', b);
       },
     };
@@ -129,7 +129,7 @@ context('Spies, Stubs, and Clock', () => {
        * @param a {number}
        * @param b {number}
        */
-      add(a, b) {
+      add(a: number, b: number) {
         return a + b;
       },
     };
@@ -163,7 +163,7 @@ context('Spies, Stubs, and Clock', () => {
      * Returns true if the given number is even
      * @param {number} x
      */
-    const isEven = (x) => x % 2 === 0;
+    const isEven = (x: number) => x % 2 === 0;
 
     // expect the value to pass a custom predicate function
     // the second argument to "sinon.match(predicate, message)" is
@@ -175,14 +175,20 @@ context('Spies, Stubs, and Clock', () => {
      * @param {number} limit
      * @returns {(x: number) => boolean}
      */
-    const isGreaterThan = (limit) => (x) => x > limit;
+    const isGreaterThan =
+      (limit: number): ((x: number) => boolean) =>
+      (x) =>
+        x > limit;
 
     /**
      * Returns a function that checks if a given number is less than the limit
      * @param {number} limit
      * @returns {(x: number) => boolean}
      */
-    const isLessThan = (limit) => (x) => x < limit;
+    const isLessThan =
+      (limit: number): ((x: number) => boolean) =>
+      (x) =>
+        x < limit;
 
     // you can combine several matchers using "and", "or"
     expect(spy).to.be.calledWith(
