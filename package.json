@@ -4,11 +4,14 @@
   "description": "Cypress E2E demo application",
   "main": "index.js",
   "dependencies": {
-    "cypress": "^12.3.0",
-    "typescript": "^4.9.4"
+    "cypress": "^12.3.0"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.4",
+    "cypress-mochawesome-reporter": "^3.2.3"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cypress run"
   },
   "repository": {
     "type": "git",
