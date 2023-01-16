@@ -1,3 +1,5 @@
+/* eslint cypress/no-unnecessary-waiting: 0 */
+
 context('Viewport', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/commands/viewport');

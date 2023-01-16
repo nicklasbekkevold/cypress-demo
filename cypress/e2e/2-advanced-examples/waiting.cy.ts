@@ -1,3 +1,5 @@
+/* eslint cypress/no-unnecessary-waiting: 0 */
+
 context('Waiting', () => {
   beforeEach(() => {
     cy.visit('https://example.cypress.io/commands/waiting');
