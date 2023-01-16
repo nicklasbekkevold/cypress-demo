@@ -1,6 +1,6 @@
 /// JSON fixture file can be loaded directly using
 // the built-in JavaScript bundler
-import requiredExample from '../../fixtures/example';
+import requiredExample from '../../fixtures/example.json';
 
 context('Files', () => {
   beforeEach(() => {

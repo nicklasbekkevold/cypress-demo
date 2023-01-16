@@ -33,6 +33,6 @@
     "isolatedModules": false,
     "incremental": true
   },
-  "include": ["**/*.ts", "**/*.tsx"],
+  "include": ["**/*.ts", "**/*.tsx", "../cypress.d.ts"],
   "exclude": ["node_modules"]
 }

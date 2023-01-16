@@ -16,12 +16,3 @@
 // Import commands.js using ES2015 syntax:
 import 'cypress-mochawesome-reporter/register';
 import './commands';
-
-// TypeScript declarations
-declare global {
-  namespace Cypress {
-    interface Chainable<Subject> {
-      console(value: string): Chainable<JQuery<HTMLElement>>;
-    }
-  }
-}

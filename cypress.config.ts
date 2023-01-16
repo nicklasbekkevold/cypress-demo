@@ -1,10 +1,11 @@
 import { defineConfig } from 'cypress';
+import mochawesomeReporterPlugin from 'cypress-mochawesome-reporter/plugin';
 
 module.exports = defineConfig({
   reporter: 'cypress-mochawesome-reporter',
   e2e: {
     setupNodeEvents(on) {
-      require('cypress-mochawesome-reporter/plugin')(on);
+      return mochawesomeReporterPlugin(on);
     },
   },
 });
