@@ -6,29 +6,6 @@ context('Cypress.Commands', () => {
   // https://on.cypress.io/custom-commands
 
   it('.add() - create a custom command', () => {
-    Cypress.Commands.add(
-      'console',
-      {
-        prevSubject: true,
-      },
-      (subject, method) => {
-        // the previous subject is automatically received
-        // and the commands arguments are shifted
-
-        // allow us to change the console method used
-        method = method || 'log';
-
-        // log the subject to the console
-        // @ts-expect-error TS-7053
-        console[method]('The subject is', subject);
-
-        // whatever we return becomes the new subject
-        // we don't want to change the subject so
-        // we return whatever was passed in
-        return subject;
-      }
-    );
-
     cy.get('button')
       .console('info')
       .then(() => {
